@@ -1,0 +1,16 @@
+body{
+    text-align:center;
+    background-image: linear-gradient(#793cb6, #42a6e9) 
+}
+h1{
+    color: #726ac0
+}
+div1 {
+    background-color: white;
+    width: 1000px;
+    border-radius: 7%;
+    padding: 5px;
+    border: 15px solid rgb(255, 255, 255)
+    
+}
+  

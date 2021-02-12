@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+
+<link href="./css/album.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+
+        <div class = "title">
+        <strong style="padding-top:90px;font-family:Lato">SYNC</strong>
+        <i class="fas fa-sync"></i>
+        </div>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target="#navbarResponsive">
+          <span class = "navbar-toggler-icon"></span>
+        </button>
+        <div class = "collapse navbar-collapse" id ="navbarResponsive">
+          <ul class = "navbar-nav ml-auto">
+            <li class = "nav-item ">
+              <a class = "nav-link" href = "index.html" style= "font-family:Lato">Feed</a>
+            </li>
+            <li class = "nav-item ">
+              <a class = "nav-link" href = "google-calendar.html" style= "font-family:Lato">Upcoming Events</a>
+            </li>
+            <li class = "nav-item ">
+              <a class = "nav-link" href = "currentfriends.html" style= "font-family:Lato">Friends</a>
+            </li>
+            <li class = "nav-item ">
+                <a class = "nav-link active" href = "addfreetime.html" style= "font-family:Lato">Availability</a>
+            </li>
+            <a href="newevent.html"><button type="button" class="btn btn-outline-primary" style="font-family: Lato;">Create New Event</button></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    const date_current = new Date();
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: date_current,
+      editable: true,
+      selectable: true,
+      businessHours: true,
+      dayMaxEvents: true,
+      dateClick: function(info){
+        const startTime = prompt("Start Time?")
+        const updatedStart = "T"+startTime
+        const endTime = prompt("End Time?")
+        const updatedEnd = "T"+endTime
+        calendar.addEvent({
+            groupId: 999,
+            title: 'Free Time',
+            start: info.dateStr+updatedStart,
+            end: info.dateStr+updatedEnd,
+          });
+      }, // allow "more" link when too many events
+    });
+
+    calendar.render();
+  });
+
+</script>
+  </head>
+  <body>
+    <link href='./css/main.css' rel='stylesheet' />
+    <script src='./js/main.js'></script>
+    <link href='./css/calendar.css' rel='stylesheet' />
+    <body>
+    
+      <div id='calendar'></div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="false">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Recipient:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="js/outcome.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

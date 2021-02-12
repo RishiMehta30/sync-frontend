@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  background: #1a2980; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #26d0ce,
+    #1a2980
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+h1 {
+  color: #207da7;
+}
+div1 {
+  background-color: white;
+  width: 1000px;
+  border-radius: 7%;
+  padding: 5px;
+  border: 15px solid rgb(255, 255, 255);
+}

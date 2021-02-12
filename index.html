@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Sync</title>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link href="css/album.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <head>
+   
+
+    </div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+          <div class="container-fluid">
+  
+            <div class = "title">
+             <strong style="padding-top:90px;font-family:Lato">SYNC</strong>
+             <i class="fas fa-sync"></i>
+            </div>
+            <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target="#navbarResponsive">
+              <span class = "navbar-toggler-icon"></span>
+            </button>
+            <div class = "collapse navbar-collapse" id ="navbarResponsive">
+              <ul class = "navbar-nav ml-auto">
+                <li class = "nav-item ">
+                  <a class = "nav-link active" href = "index.html" style= "font-family:Lato">Feed</a>
+                </li>
+                <li class = "nav-item ">
+                  <a class = "nav-link" href = "google-calendar.html" style= "font-family:Lato">Upcoming Events</a>
+                </li>
+                <li class = "nav-item ">
+                  <a class = "nav-link" href = "currentfriends.html" style= "font-family:Lato">Friends</a>
+                </li>
+                <li class = "nav-item ">
+                  <a class = "nav-link" href = "addfreetime.html" style= "font-family:Lato">Availability</a>
+              </li>
+                <a href="newevent.html"><button type="button" class="btn btn-outline-primary" style="font-family: Lato;">Create New Event</button></a>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+<main role="main">
+<div class="album py-5 bg-light">
+<div class="container">
+<div class="row">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">                
+  <div class="event-content">
+      <div id="event1" class="tab-pane fade active show">
+          <div class="row">                                
+              <div class="col-lg-4 col-md-6">
+                  <div class="card card-block card-stretch card-height">
+                      <div class="card-body rounded event-detail event-detail-danger disabled">
+                          <div class="d-flex align-items-top justify-content-between">
+                              <div>
+                                  <h4 style = "padding-bottom: 5px;"class="mb-2 mr-4">Startup team meeting for buisness model</h4>                                        
+                                  <p class="mb-2 text-danger font-weight-500"><i class="lar la-user pr-2"></i><b>Startup Squad</b></p>
+                                  <p class="mb-2 text-danger font-weight-500"><i class="las la-clock pr-2"></i>Sat, 11PM - 11:50 PM</p>
+                                  <p class="mb-4 card-description"><i class="las la-comment pr-2"></i>Description.</p>
+                                  <div class="d-flex align-items-center pt-4">
+                                      <a href="index.html#" class="btn btn-danger mr-3 px-xl-4">50 Min</a>
+                                      <a href="index.html#" class="btn btn-outline-danger copy d-none px-xl-4" data-extra-toggle="copy" title="Copy to clipboard" data-toggle="tooltip"><i class="las la-link pr-2"></i>Copy Link</a>
+                                  </div>
+                              </div>
+                              <div class="card-header-toolbar mt-1">
+                                  <div class="dropdown d-none">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <div class="card card-block card-stretch card-height">
+                      <div class="card-body rounded event-detail event-detail-info">
+                          <div class="d-flex align-items-top justify-content-between">
+                              <div>
+                                  <h4 style = "padding-bottom: 5px;" class="mb-2 mr-4">WBP Sync to discuss arborlos</h4>                                        
+                                  <p class="mb-2 text-info font-weight-500"><i class="las la-user pr-2"></i><b>WBP Team</b></p>
+                                  <p class="mb-2 text-info font-weight-500"><i class="las la-clock pr-2"></i>Sun, 10PM - 10:30 PM</p>
+                                  <p class="mb-4 card-description"><i class="las la-comment pr-2"></i>Description.</p>
+                                  <div class="d-flex align-items-center pt-4">
+                                      <a href="index.html#" class="btn btn-info mr-3 px-xl-4">30 Min</a>
+                                  </div>
+                              </div>
+                              <div class="card-header-toolbar mt-1">
+                                  <div class="dropdown d-none">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div> 
+      </div>
+  </body>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+  <script src="js/secure.js"></script>
+  <!--<script src="js/index.js"></script>-->
+  <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log("User signed in");
+      } else {
+        window.location.href = "signin.html"
+      }
+    });
+  </script>
+</html>

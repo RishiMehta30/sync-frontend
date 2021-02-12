@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Sync</title>
+        <link href="css/album.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+
+          <div class = "title">
+           <strong style="padding-top:90px;font-family:Lato">SYNC</strong>
+           <i class="fas fa-sync"></i>
+          </div>
+          <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target="#navbarResponsive">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+          <div class = "collapse navbar-collapse" id ="navbarResponsive">
+            <ul class = "navbar-nav ml-auto">
+              <li class = "nav-item ">
+                <a class = "nav-link" href = "index.html" style= "font-family:Lato">Feed</a>
+              </li>
+              <li class = "nav-item ">
+                <a class = "nav-link" href = "google-calendar.html" style= "font-family:Lato">Upcoming Events</a>
+              </li>
+              <li class = "nav-item ">
+                <a class = "nav-link active" href = "currentfriends.html" style= "font-family:Lato">Friends</a>
+              </li>
+              <li class = "nav-item ">
+                <a class = "nav-link" href = "addfreetime.html" style= "font-family:Lato">Availability</a>
+            </li>
+              <a href="newevent.html"><button type="button" class="btn btn-outline-primary" style="font-family: Lato;">Create New Event</button></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      </header>
+
+      <body class="fixed-top-navbar color-light ">
+    <!-- loader END -->
+      <div class="content-page" style="padding-top: 50px; font-family:Lato">
+        <div class="container-fluid container">
+      <div class="row">
+         <div class="col-lg-12">
+            <div class="card card-block card-stretch card-height">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="iq-header-title">
+                     <h4 class="card-title mb-0" style="font-weight:1000;"><b>Friends</b></h4>
+                  </div>
+                  <a href="addnewfriend.html" class="btn btn-primary">Add New Friend</a>
+               </div>
+               <div class="card-body" style="font-weight:100;">
+                  <div class="table-responsive data-table">
+                     <table class="data-tables table" style="width:100%">
+                        <thead>
+                           <tr>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Ayaan Esmail</td>
+                              <td>ayaanesmail04@gmail.com</td>
+                              <td><a href="addnewfriend.html" class="btn btn-link" style="padding-top: 0px;">Add Into New Group</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>Eshan Rasul</td>
+                              <td>eshanrasul8@gmail.com</td>
+                              <td><a href="addnewfriend.html" class="btn btn-link" style="padding-top: 0px;">Add Into New Group</a>
+                           </tr>
+                           <tr>
+                              <td>Arnav Shah</td>
+                              <td>shaharnav03@gmail.com</td>
+                              <td><a href="addnewfriend.html" class="btn btn-link" style="padding-top: 0px;">Add Into New Group</a>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script>
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log("User signed in");
+        } else {
+          window.location.href = "signin.html"
+        }
+      });
+    </script>
+  </body>
+</html>

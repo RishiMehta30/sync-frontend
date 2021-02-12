@@ -1,0 +1,114 @@
+:root {
+    --jumbotron-padding-y: 3rem;
+  }
+  .navbar {
+    padding: .8rem
+  }
+  .navbar-nav li {
+    padding-right: 50px
+  }
+  .nav-link {
+    font-size: 1.1em !important
+  }
+  .title{
+    font-size:22px;
+    padding-left:150px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 204, 255)
+  }
+  .container{
+    padding-top:0px;
+    padding-bottom: 20px;
+  }
+  .jumbotron {
+    padding-top: var(--jumbotron-padding-y);
+    padding-bottom: var(--jumbotron-padding-y);
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: calc(var(--jumbotron-padding-y) * 2);
+      padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
+  }
+  input, button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  }
+  
+  .main-div, .loggedin-div {
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 150px;
+    padding: 20px;
+    display: none;
+  }
+  
+  .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     background-color: rgb(204, 204, 204);
+     color: white;
+     text-align: center;
+  }
+  
+  .main-div input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  
+  .main-div input:focus {
+    border: 1px solid #777;
+  }
+  
+  .main-div button, .loggedin-div button {
+    background: #16aaee;
+    color: #fff;
+    border: 1px solid #16aaee;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+  }
+  .main-div button:hover, .loggedin-div button:hover {
+    background: #fff;
+    color: #16aaee;
+    border: 1px solid 16aaee;
+    cursor: pointer;
+  }
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 40rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
